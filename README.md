@@ -1,2 +1,1 @@
-# node-realsense2
- 
+# @things-factory/node-librealsense2
