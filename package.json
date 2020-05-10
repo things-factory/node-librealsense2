@@ -1,0 +1,35 @@
+{
+  "name": "@things-factory/node-librealsense2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha \"test/**/test-*.js\"",
+    "doc": "node scripts/generate-doc.js",
+    "install": "node-gyp rebuild",
+    "postinstall": "node scripts/generate-doc.js",
+    "start": "node index.js",
+    "build": "node-gyp configure build",
+    "rebuild": "node-gyp rebuild",
+    "rebuild:dev": "node-gyp rebuild --debug",
+    "build:dev": "node-gyp build --debug",
+    "clean": "node-gyp clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "fs-compare": "^0.0.4",
+    "jsonfile": "^6.0.1",
+    "nan": "^2.14.1",
+    "pngjs": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jsdoc": "^3.6.4",
+    "marked": "^1.0.0",
+    "mocha": "^7.1.2",
+    "prettier": "^2.0.5",
+    "should": "^13.2.3"
+  }
+}

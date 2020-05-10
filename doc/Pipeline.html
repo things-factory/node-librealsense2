@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Pipeline</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Pipeline</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Pipeline<span class="signature">(context<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">This class provides a simple way to retrieve frame data</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Pipeline"><span class="type-signature"></span>new Pipeline<span class="signature">(context<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Construct a Pipeline object
+There are 2 acceptable syntax
+
+<pre><code>
+ Syntax 1. new Pipeline()
+ Syntax 2. new Pipeline(context)
+</code></pre>
+Syntax 1 uses the default context.
+Syntax 2 used the context created by application
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Context.html">Context</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the <a href="Context.html">Context</a> that is being used by the pipeline</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2716">line 2716</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">()</span><span class="type-signature"> &rarr; {undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Destroy the resource associated with this pipeline
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2744">line 2744</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getActiveProfile"><span class="type-signature"></span>getActiveProfile<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="PipelineProfile.html">PipelineProfile</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Return the active device and streams profiles, used by the pipeline.
+The pipeline streams profiles are selected during Pipeline.start. The method returns a
+valid result only when the pipeline is active -
+between calls to Pipeline.start and Pipeline.stop.
+After Pipeline.stop is called, the pipeline doesn't own the device, thus, the pipeline
+selected device may change in
+subsequent activations.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2870">line 2870</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the actual pipeline device and streams profile, which was
+successfully configured to the streaming device on start.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PipelineProfile.html">PipelineProfile</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="pollForFrames"><span class="type-signature"></span>pollForFrames<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="FrameSet.html">FrameSet</a>|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Check if a new set of frames is available and retrieve the latest undelivered set.
+The frameset includes time-synchronized frames of each enabled stream in the pipeline.
+The method returns without blocking the calling thread, with status of new frames available
+or not. If available, it fetches the latest frames set.
+Device frames, which were produced while the function wasn't called, are dropped.
+To avoid frame drops, this method should be called as fast as the device frame rate.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2849">line 2849</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="FrameSet.html">FrameSet</a></span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">(config<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Start streaming
+There are 2 acceptable syntax
+
+<pre><code>
+ Syntax 1. start()
+ Syntax 2. start(config)
+</code></pre>
+Syntax 1 uses the default configuration.
+Syntax 2 used the configured streams and or device of the config parameter
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>config</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Config.html">Config</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the <a href="Config.html">Config</a> object to use for configuration</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2777">line 2777</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <a href="PipelineProfile.html">PipelineProfile</a>
+</div>
+
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="stop"><span class="type-signature"></span>stop<span class="signature">()</span><span class="type-signature"> &rarr; {undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Stop streaming
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2799">line 2799</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="waitForFrames"><span class="type-signature"></span>waitForFrames<span class="signature">(timeout)</span><span class="type-signature"> &rarr; {<a href="FrameSet.html">FrameSet</a>|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Wait until a new set of frames becomes available.
+The returned frameset includes time-synchronized frames of each enabled stream in the pipeline.
+In case of different frame rates of the streams, the frames set include a matching frame of the
+slow stream, which may have been included in previous frames set.
+The method blocks the calling thread, and fetches the latest unread frames set.
+Device frames, which were produced while the function wasn't called, are dropped.
+To avoid frame drops, this method should be called as fast as the device frame rate.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>timeout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Integer</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    5000
+                
+                </td>
+            
+
+            <td class="description last">max time to wait, in milliseconds, default to 5000 ms</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line2823">line 2823</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>See Pipeline.latestFrame</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    a FrameSet object or Undefined
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="FrameSet.html">FrameSet</a></span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Align.html">Align</a></li><li><a href="Colorizer.html">Colorizer</a></li><li><a href="ColorSensor.html">ColorSensor</a></li><li><a href="Config.html">Config</a></li><li><a href="Context.html">Context</a></li><li><a href="DecimationFilter.html">DecimationFilter</a></li><li><a href="DepthFrame.html">DepthFrame</a></li><li><a href="DepthSensor.html">DepthSensor</a></li><li><a href="DepthToDisparityTransform.html">DepthToDisparityTransform</a></li><li><a href="Device.html">Device</a></li><li><a href="DeviceHub.html">DeviceHub</a></li><li><a href="DeviceList.html">DeviceList</a></li><li><a href="DisparityFrame.html">DisparityFrame</a></li><li><a href="DisparityToDepthTransform.html">DisparityToDepthTransform</a></li><li><a href="Filter.html">Filter</a></li><li><a href="FisheyeSensor.html">FisheyeSensor</a></li><li><a href="Frame.html">Frame</a></li><li><a href="FrameSet.html">FrameSet</a></li><li><a href="HoleFillingFilter.html">HoleFillingFilter</a></li><li><a href="MotionFrame.html">MotionFrame</a></li><li><a href="MotionSensor.html">MotionSensor</a></li><li><a href="MotionStreamProfile.html">MotionStreamProfile</a></li><li><a href="Pipeline.html">Pipeline</a></li><li><a href="PipelineProfile.html">PipelineProfile</a></li><li><a href="PlaybackContext.html">PlaybackContext</a></li><li><a href="PlaybackDevice.html">PlaybackDevice</a></li><li><a href="PointCloud.html">PointCloud</a></li><li><a href="Points.html">Points</a></li><li><a href="PoseFrame.html">PoseFrame</a></li><li><a href="RecorderDevice.html">RecorderDevice</a></li><li><a href="RecordingContext.html">RecordingContext</a></li><li><a href="ROISensor.html">ROISensor</a></li><li><a href="Sensor.html">Sensor</a></li><li><a href="SpatialFilter.html">SpatialFilter</a></li><li><a href="StreamProfile.html">StreamProfile</a></li><li><a href="Syncer.html">Syncer</a></li><li><a href="TemporalFilter.html">TemporalFilter</a></li><li><a href="Tm2.html">Tm2</a></li><li><a href="UnrecoverableError.html">UnrecoverableError</a></li><li><a href="VideoFrame.html">VideoFrame</a></li><li><a href="VideoStreamProfile.html">VideoStreamProfile</a></li></ul><h3>Events</h3><ul><li><a href="Context.html#event:device-changed">device-changed</a></li><li><a href="PlaybackContext.html#event:device-changed">device-changed</a></li><li><a href="RecordingContext.html#event:device-changed">device-changed</a></li><li><a href="Sensor.html#event:notification">notification</a></li></ul><h3>Global</h3><ul><li><a href="global.html#camera_info">camera_info</a></li><li><a href="global.html#cleanup">cleanup</a></li><li><a href="global.html#distortion">distortion</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#frame_metadata">frame_metadata</a></li><li><a href="global.html#frameMetadataContent">frameMetadataContent</a></li><li><a href="global.html#getError">getError</a></li><li><a href="global.html#log_severity">log_severity</a></li><li><a href="global.html#notification_category">notification_category</a></li><li><a href="global.html#option">option</a></li><li><a href="global.html#preset_preference">preset_preference</a></li><li><a href="global.html#recording_mode">recording_mode</a></li><li><a href="global.html#rs400_visual_preset">rs400_visual_preset</a></li><li><a href="global.html#sr300_visual_preset">sr300_visual_preset</a></li><li><a href="global.html#stream">stream</a></li><li><a href="global.html#timestamp_domain">timestamp_domain</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Sun May 10 2020 18:51:06 GMT+0900 (대한민국 표준시)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: DeviceHub</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: DeviceHub</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>DeviceHub<span class="signature">(context)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Encapsulate the handling of 'device-changed' notification, when devices are conncted or
+disconnected. It can connect to the existing device(s) in system, and/or wait for the
+arrival/removal of devices.</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="DeviceHub"><span class="type-signature"></span>new DeviceHub<span class="signature">(context)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Context.html">Context</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a librealsense2 Context</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line3215">line 3215</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Release resources associated with the object
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line3248">line 3248</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isConnected"><span class="type-signature"></span>isConnected<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Check if a device is connected
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line3238">line 3238</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="waitForDevice"><span class="type-signature"></span>waitForDevice<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Device.html">Device</a>|undefined}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    If any device is connected return it, otherwise wait until next RealSense device connects.
+Calling this method multiple times will cycle through connected devices
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line3229">line 3229</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Device.html">Device</a></span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Align.html">Align</a></li><li><a href="Colorizer.html">Colorizer</a></li><li><a href="ColorSensor.html">ColorSensor</a></li><li><a href="Config.html">Config</a></li><li><a href="Context.html">Context</a></li><li><a href="DecimationFilter.html">DecimationFilter</a></li><li><a href="DepthFrame.html">DepthFrame</a></li><li><a href="DepthSensor.html">DepthSensor</a></li><li><a href="DepthToDisparityTransform.html">DepthToDisparityTransform</a></li><li><a href="Device.html">Device</a></li><li><a href="DeviceHub.html">DeviceHub</a></li><li><a href="DeviceList.html">DeviceList</a></li><li><a href="DisparityFrame.html">DisparityFrame</a></li><li><a href="DisparityToDepthTransform.html">DisparityToDepthTransform</a></li><li><a href="Filter.html">Filter</a></li><li><a href="FisheyeSensor.html">FisheyeSensor</a></li><li><a href="Frame.html">Frame</a></li><li><a href="FrameSet.html">FrameSet</a></li><li><a href="HoleFillingFilter.html">HoleFillingFilter</a></li><li><a href="MotionFrame.html">MotionFrame</a></li><li><a href="MotionSensor.html">MotionSensor</a></li><li><a href="MotionStreamProfile.html">MotionStreamProfile</a></li><li><a href="Pipeline.html">Pipeline</a></li><li><a href="PipelineProfile.html">PipelineProfile</a></li><li><a href="PlaybackContext.html">PlaybackContext</a></li><li><a href="PlaybackDevice.html">PlaybackDevice</a></li><li><a href="PointCloud.html">PointCloud</a></li><li><a href="Points.html">Points</a></li><li><a href="PoseFrame.html">PoseFrame</a></li><li><a href="RecorderDevice.html">RecorderDevice</a></li><li><a href="RecordingContext.html">RecordingContext</a></li><li><a href="ROISensor.html">ROISensor</a></li><li><a href="Sensor.html">Sensor</a></li><li><a href="SpatialFilter.html">SpatialFilter</a></li><li><a href="StreamProfile.html">StreamProfile</a></li><li><a href="Syncer.html">Syncer</a></li><li><a href="TemporalFilter.html">TemporalFilter</a></li><li><a href="Tm2.html">Tm2</a></li><li><a href="UnrecoverableError.html">UnrecoverableError</a></li><li><a href="VideoFrame.html">VideoFrame</a></li><li><a href="VideoStreamProfile.html">VideoStreamProfile</a></li></ul><h3>Events</h3><ul><li><a href="Context.html#event:device-changed">device-changed</a></li><li><a href="PlaybackContext.html#event:device-changed">device-changed</a></li><li><a href="RecordingContext.html#event:device-changed">device-changed</a></li><li><a href="Sensor.html#event:notification">notification</a></li></ul><h3>Global</h3><ul><li><a href="global.html#camera_info">camera_info</a></li><li><a href="global.html#cleanup">cleanup</a></li><li><a href="global.html#distortion">distortion</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#frame_metadata">frame_metadata</a></li><li><a href="global.html#frameMetadataContent">frameMetadataContent</a></li><li><a href="global.html#getError">getError</a></li><li><a href="global.html#log_severity">log_severity</a></li><li><a href="global.html#notification_category">notification_category</a></li><li><a href="global.html#option">option</a></li><li><a href="global.html#preset_preference">preset_preference</a></li><li><a href="global.html#recording_mode">recording_mode</a></li><li><a href="global.html#rs400_visual_preset">rs400_visual_preset</a></li><li><a href="global.html#sr300_visual_preset">sr300_visual_preset</a></li><li><a href="global.html#stream">stream</a></li><li><a href="global.html#timestamp_domain">timestamp_domain</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Sun May 10 2020 18:51:06 GMT+0900 (대한민국 표준시)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
