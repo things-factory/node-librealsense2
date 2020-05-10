@@ -1,8 +1,13 @@
 {
   "name": "@things-factory/node-librealsense2",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Node.js API for Intel® RealSense™ SDK 2.0",
   "main": "index.js",
+  "keywords": [
+    "realsense",
+    "camera",
+    "depth camera"
+  ],
   "scripts": {
     "test": "npx mocha \"test/**/test-*.js\"",
     "doc": "node scripts/generate-doc.js",
@@ -15,7 +20,7 @@
     "build:dev": "node-gyp build --debug",
     "clean": "node-gyp clean"
   },
-  "author": "",
+  "author": "Hearty Oh <heartyoh@hatiolab.com>",
   "license": "ISC",
   "dependencies": {
     "bindings": "^1.5.0",
