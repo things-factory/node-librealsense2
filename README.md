@@ -4,10 +4,17 @@ This is the Node.js wrapper for the C++ `librealsense2` for Intel® RealSense™
 
 ## prerequisites
 
-### MacOS
+### librealsense
+
+- https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
+- for MacOS
 
 ```
 brew install librealsense  # librealsense libraries
+```
+
+### jsdoc
+
+```
 npm install -g jsdoc     # Required for document generation
-npm install -g node-gyp  # This is optional
 ```
