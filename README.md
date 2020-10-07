@@ -18,3 +18,7 @@ brew install librealsense  # librealsense libraries
 ```
 npm install -g jsdoc     # Required for document generation
 ```
+
+## License
+
+This project is licensed under the [Apache License, Version 2.0](LICENSE).
