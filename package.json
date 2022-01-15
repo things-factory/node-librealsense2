@@ -32,7 +32,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "jsdoc": "^3.6.4",
-    "marked": "^1.0.0",
+    "marked": "^4.0.10",
     "mocha": "^7.1.2",
     "prettier": "^2.0.5",
     "should": "^13.2.3"
